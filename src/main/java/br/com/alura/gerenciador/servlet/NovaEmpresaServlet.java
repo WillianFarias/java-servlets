@@ -16,8 +16,13 @@ public class NovaEmpresaServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		String nome = request.getParameter("nome");
+		String cnpj = request.getParameter("cnpj");
 		PrintWriter out = response.getWriter();
-		out.println("<html><body>Empresa</body></html>");
+		
+		if (nome==null) {
+			nome = "";
+		}
+		out.println("<html><body>Empresa "+ nome +" "+ cnpj +"</body></html>");
 	}
-
 }
