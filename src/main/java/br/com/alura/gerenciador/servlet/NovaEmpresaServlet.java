@@ -22,6 +22,6 @@ public class NovaEmpresaServlet extends HttpServlet {
 		if (nome==null) {
 			nome = "";
 		}
-		out.println("<html><body>Empresa "+ nome +" "+ cnpj +"</body></html>");
+		out.println("<html><body>Empresa "+ nome +"</body></html>");
 	}
 }
