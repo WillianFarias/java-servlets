@@ -14,7 +14,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 7644940709210710629L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void /*service ou doGet*/doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		String nome = request.getParameter("nome");
 		PrintWriter out = response.getWriter();
