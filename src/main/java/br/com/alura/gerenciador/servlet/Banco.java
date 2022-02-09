@@ -8,6 +8,7 @@ public class Banco {
 	private static List<Empresa> empresas = new ArrayList<>();
 
 	public void adiciona(Empresa empresa) {
+		System.out.println("Cadastrando nova empresa");
 		Banco.empresas.add(empresa);
 	}
 	
