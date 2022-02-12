@@ -11,11 +11,18 @@
 		<h2>Empresas Cadastradas</h2>
 		<h3>Java Standard Taglib</h3>
 	
-			<ul>
-				<c:forEach items="${empresas}" var="empresa">
-					<li> ${ empresa.nome } </li>
-				</c:forEach>			
-			</ul>
+			
+			<c:if test="${not empty empresas} ">
+				<ul>
+					<c:forEach items="${empresas}" var="empresa">
+						<li> ${ empresa.nome } </li>
+					</c:forEach>			
+				</ul>
+			</c:if>
+			
+			<c:if test="${ empty empresas }">
+				Não Existem Empresas Cadastradas
+			</c:if>
 	
 <!-- 		<ul> -->
 <%-- 		<% --%>
