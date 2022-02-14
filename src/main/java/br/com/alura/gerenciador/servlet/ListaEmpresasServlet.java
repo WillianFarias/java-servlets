@@ -1,7 +1,7 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -18,6 +18,10 @@ public class ListaEmpresasServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
+		
+		for (Empresa empresa : lista) {
+			System.out.println(empresa.getNome());
+		}
 //		PrintWriter out = response.getWriter();
 		
 //		out.println("<html><body>");

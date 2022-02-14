@@ -7,14 +7,14 @@
 
 <html>
 	<body>
+	
 		<c:if test="${not empty nomeEmpresa}">
 			Empresa ${ nomeEmpresa } cadastrada com sucesso! <%--expression language --%>
 		</c:if>
 		
-		<c:if test=" ${empty nomeEmpresa} ">
-			Nenhuma empresa nova cadastrada!
+		<c:if test="${empty nomeEmpresa }">
+			Não foi cadastrada uma nova empresa!		
 		</c:if>
-		
 <%-- 		${nomeEmpresa} --%>
 		
 	</body>
