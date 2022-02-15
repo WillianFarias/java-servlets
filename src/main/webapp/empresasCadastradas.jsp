@@ -9,16 +9,14 @@
 
 <html>
 	<body>
-		<h2>Empresas Cadastradas</h2>
+		<h2>Empress Cadastradas</h2>
 		<h3>Java Standard Taglib</h3>
 	
-			
-			<c:if test="${not empty empresas} ">
+			<c:if test="${not empty empresas }">
 				<ul>
 					<c:forEach items="${empresas}" var="empresa">
-					<fmt:formatDate value="${ empresa.dataCadastro }" var="dataCadastro"/>
-						<li> ${ empresa.nome }  ${ dataCadastro } </li>
-					</c:forEach>			
+						<li> ${ empresa.nome } </li>
+					</c:forEach>
 				</ul>
 			</c:if>
 			

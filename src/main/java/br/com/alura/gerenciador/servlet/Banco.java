@@ -19,7 +19,6 @@ public class Banco {
 	}
 
 	public void adiciona(Empresa empresa) {
-		System.out.println("Cadastrando nova empresa");
 		Banco.empresas.add(empresa);
 	}
 	
