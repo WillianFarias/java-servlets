@@ -4,18 +4,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <%-- <% --%>
-<!-- // 	List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas"); -->
+<!-- //  	List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas"); -->
 <%-- %> --%>
 
 <html>
 	<body>
-		<h2>Empress Cadastradas</h2>
-		<h3>Java Standard Taglib</h3>
+		<h2>Empresas Cadastradas</h2>
+<!-- 		<h3>Java Standard Taglib</h3> -->
 	
 			<c:if test="${not empty empresas }">
 				<ul>
 					<c:forEach items="${empresas}" var="empresa">
-						<li> ${ empresa.nome } </li>
+						<fmt:formatDate value="${empresa.dataAbertura}" var="dataAbertura"/>
+						<li> ${ empresa.nome } ${ dataAbertura } </li>
 					</c:forEach>
 				</ul>
 			</c:if>
@@ -31,10 +32,10 @@
 <!-- 		<ul> -->
 <%-- 		<% --%>
 <!-- // 			for (Empresa empresa : lista) { -->
-<%-- 		%> --%>
+<%--  		%> --%>
 <%-- 			<li><%= empresa.getNome()%></li> --%>
 <%-- 		<% --%>
-<!-- // 			} -->
+<!-- //  			} -->
 <%-- 		%> --%>
 <!-- 		</ul> -->
 	<body>
