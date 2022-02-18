@@ -1,7 +1,10 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
 //import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,8 +23,18 @@ public class NovaEmpresaServlet extends HttpServlet {
 		System.out.println("Cadastrando nova Empresa");
 		
 		String nomeEmpresa = request.getParameter("nome");
+		String dataAbertura = request.getParameter("dataAbertura");
 		Empresa empresa = new Empresa();
 		empresa.setNome(nomeEmpresa);
+		
+		try {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date dataAberturaDate = simpleDateFormat.parse(dataAbertura);
+			empresa.setDataAbertura(dataAberturaDate);
+		} catch (ParseException e) {
+			throw new ServletException("Não Foi Possível Definir a Data de Abertura! " + e);
+		}
+		
 //		PrintWriter out = response.getWriter();
 		
 		if (nomeEmpresa==null) {

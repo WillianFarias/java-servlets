@@ -15,8 +15,8 @@
 			<c:if test="${not empty empresas }">
 				<ul>
 					<c:forEach items="${empresas}" var="empresa">
-						<fmt:formatDate value="${empresa.dataAbertura}" var="dataAbertura"/>
-						<li> ${ empresa.nome } ${ dataAbertura } </li>
+						<fmt:formatDate value="${empresa.dataAbertura}" var="dataAbertura" pattern="dd/MM/yyyy"/>
+						<li> ${ empresa.nome } - ${ dataAbertura } </li>
 					</c:forEach>
 				</ul>
 			</c:if>
