@@ -9,6 +9,10 @@
 
 <html>
 	<body>
+		<c:if test="${ not empty empresa }">
+			Empresa ${ empresa } cadastrada com sucesso!
+		</c:if>
+		
 		<h2>Empresas Cadastradas</h2>
 <!-- 		<h3>Java Standard Taglib</h3> -->
 	
