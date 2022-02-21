@@ -2,6 +2,7 @@
 <%@ page import="br.com.alura.gerenciador.servlet.Empresa" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%-- <c:url value="/gerenciador/removeEmpresa" var="removeEmpresa"/> --%>
 
 <%-- <% --%>
 <!-- //  	List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas"); -->
@@ -20,7 +21,9 @@
 				<ul>
 					<c:forEach items="${empresas}" var="empresa">
 						<fmt:formatDate value="${empresa.dataAbertura}" var="dataAbertura" pattern="dd/MM/yyyy"/>
-						<li> ${ empresa.nome } - ${ dataAbertura } </li>
+						<li> ${ empresa.nome } - ${ dataAbertura } 
+							<a href="/gerenciador/removeEmpresa">Remover</a>
+						</li>
 					</c:forEach>
 				</ul>
 			</c:if>
