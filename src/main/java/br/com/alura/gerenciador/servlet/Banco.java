@@ -10,15 +10,16 @@ import java.util.Date;
 public class Banco {
 	
 	private static List<Empresa> empresas = new ArrayList<>();
-	
+	private static Integer sequenciaId = 1;
+
 	static {
 		Empresa empresa = new Empresa();
 		empresa.setNome("Caeulum");
-//		empresa.setDataAbertura(dataAbertura);
+		empresa.setId(sequenciaId++);
 
 		Empresa empresa2 = new Empresa();
 		empresa2.setNome("Alura");
-//		empresa2.setDataAbertura(new Data());
+		empresa2.setId(sequenciaId++);
 		
 		empresas.add(empresa);
 		empresas.add(empresa2);
@@ -26,6 +27,7 @@ public class Banco {
 
 	public void adiciona(Empresa empresa) {
 		System.out.println("Cadastrando nova empresa na lista!");
+		empresa.setId(Banco.sequenciaId++);
 		Banco.empresas.add(empresa);
 	}
 	
