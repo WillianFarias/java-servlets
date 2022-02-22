@@ -3,10 +3,6 @@ package br.com.alura.gerenciador.servlet;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.crypto.Data;
-
-import java.util.Date;
-
 public class Banco {
 	
 	private static List<Empresa> empresas = new ArrayList<>();
@@ -34,5 +30,18 @@ public class Banco {
 	public List<Empresa> getEmpresas() {
 		return Banco.empresas;
 	}
+
+	public void removeEmpresa(Integer id) {
+		Banco.empresas.removeIf(empresa -> empresa.getId() == id);
+//		Banco.empresas.removeIf(empresa -> Banco.empresas.contains(empresa));
+	}
+//	Vai resultar em erro pois estou alterando a lista que estou percorrendo
+//	public void removeEmpresa(Integer id) {
+//		for (Empresa empresa : empresas) {
+//			if(empresa.getId() == id) {
+//				empresas.remove(empresa);
+//			}
+//		}
+//	}
 
 }
