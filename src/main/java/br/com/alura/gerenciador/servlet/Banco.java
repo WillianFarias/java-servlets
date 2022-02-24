@@ -36,6 +36,17 @@ public class Banco {
 		Banco.empresas.removeIf(empresa -> empresa.getId() == id);
 //		Banco.empresas.removeIf(empresa -> Banco.empresas.contains(empresa));
 	}
+
+	public Empresa capturarEmpresa(Integer id) {
+		Empresa empresa = new Empresa();
+		
+		for (Empresa empresaCadastrada : Banco.empresas) {
+			if(empresaCadastrada.getId() == id) {
+				empresa = empresaCadastrada;
+			}
+		}
+		return empresa;
+	}
 	
 //	public void removeEmpresa(Integer id) {
 //		Iterator<Empresa> iterator = empresas.iterator();
