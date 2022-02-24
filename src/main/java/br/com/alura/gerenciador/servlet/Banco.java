@@ -1,6 +1,7 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Banco {
@@ -35,6 +36,19 @@ public class Banco {
 		Banco.empresas.removeIf(empresa -> empresa.getId() == id);
 //		Banco.empresas.removeIf(empresa -> Banco.empresas.contains(empresa));
 	}
+	
+//	public void removeEmpresa(Integer id) {
+//		Iterator<Empresa> iterator = empresas.iterator();
+//		
+//		while(iterator.hasNext()) {
+//			Empresa empresa = iterator.next();
+//			
+//			if(empresa.getId() == id) {
+//				iterator.remove();
+//			}
+//		}
+//	}
+	
 //	Vai resultar em erro pois estou alterando a lista que estou percorrendo
 //	public void removeEmpresa(Integer id) {
 //		for (Empresa empresa : empresas) {
