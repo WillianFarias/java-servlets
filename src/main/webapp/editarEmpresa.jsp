@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-	
 	<form action="${linkEditarEmpresa}" method="post">
 	
 		Nome: <input type="text" name="nome" value="${ empresa.nome }"/>
